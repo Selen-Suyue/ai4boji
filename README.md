@@ -6,9 +6,18 @@
 
 AI4薄肌 为成年健身新手提供一个本地优先的训练系统：通过网页或 Codex 建档，记录实际状态和训练，保存长期记忆，生成可解释的起步安排，并用图表观察变化。所有语言下的项目标题都为 **AI4薄肌**。
 
-![AI4薄肌 中文预览](docs/previews/dashboard-zh.jpg)
+[![AI4薄肌 · 中文每日计划特写](docs/previews/plan-zh-hd.png)](docs/previews/plan-zh-hd.png)
 
-配色沿用[个人主页](https://selen-suyue.github.io/)的灰蓝、灰紫、灰玫瑰三组强调色；[设计说明](docs/design.md) · [趋势页预览](docs/previews/progress-zh.jpg)。
+合成示例数据。图片聚焦实际计划，可点击查看高清原图；完整界面见[在线演示](https://selen-suyue.github.io/ai4boji/demo/)。
+
+<details>
+<summary>查看高清训练趋势</summary>
+
+[![AI4薄肌 · 体重与坐椅深蹲训练趋势](docs/previews/progress-zh-hd.png)](docs/previews/progress-zh-hd.png)
+
+</details>
+
+配色沿用[个人主页](https://selen-suyue.github.io/)的灰蓝、灰紫、灰玫瑰三组强调色；[设计说明](docs/design.md) · [趋势页预览](docs/previews/progress-zh-hd.png)。
 
 ## 在线体验
 

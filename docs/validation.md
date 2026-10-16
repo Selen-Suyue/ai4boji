@@ -41,3 +41,9 @@ GitHub Actions is configured for Python 3.9 and 3.12. Deployment outcomes are vi
 - Re-rendered the film as `AI4薄肌-60s-v2.mp4`: large native plan text, date-spaced animated measurement curves, counters and color-wipe transitions. The plan and metrics come from the core’s synthetic data.
 - Decoded all 1,800 frames successfully; duration 60 seconds, 1920×1080 at 30 fps, H.264/AAC. Browser playback was checked with `?quiet=1`, with `video.muted` verified before playback. The downloadable film retains narration and music.
 - 25 application tests passed. Static output uses content hashes for CSS/JS URLs so updates do not reuse stale presentation assets.
+
+## README image clarity (2026-10-16)
+
+- Chinese and English READMEs use their respective language’s plan and progress close-ups. All four images were captured from the synthetic public demo with Chrome’s PNG screenshot output at the display’s native 2× pixel density; no JPEG intermediate or image upscaling was used.
+- Each image is 1,766 pixels wide and focuses on a single content column, keeping the interface text readable at GitHub README width. Images link to their originals, and the full live dashboard remains linked separately.
+- README image references use new filenames, avoiding reuse of the old compressed JPEG URLs.
