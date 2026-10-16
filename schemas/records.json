@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI4薄肌",
+  "description": "Input shapes. Validate a specific $defs member. Runtime validation in core.py also checks dates, timezones, IDs and inference confirmation.",
+  "$defs": {
+    "revision": {"type": "integer", "minimum": 0},
+    "date": {"type": "string", "format": "date"},
+    "profile": {
+      "type": "object", "additionalProperties": false,
+      "description": "Partial updates allowed; first creation requires name, age, goal, minutes, days, equipment.",
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 80},
+        "age": {"type": "integer", "minimum": 18, "maximum": 100},
+        "goal": {"type": "string", "minLength": 1, "maxLength": 500},
+        "minutes": {"type": "integer", "minimum": 10, "maximum": 90},
+        "days": {"type": "array", "minItems": 1, "maxItems": 3, "uniqueItems": true, "items": {"type": "integer", "minimum": 0, "maximum": 6}},
+        "equipment": {"enum": ["bodyweight", "dumbbells"]},
+        "restrictions": {"type": "string", "maxLength": 1000},
+        "diet": {"type": "string", "maxLength": 1000},
+        "timezone": {"type": "string"},
+        "locale": {"enum": ["zh-CN", "en"]},
+        "expected_revision": {"$ref": "#/$defs/revision"}
+      }
+    },
+    "checkin": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "date": {"$ref": "#/$defs/date"},
+        "sleep_hours": {"type": "number", "minimum": 0, "maximum": 24},
+        "energy": {"type": "integer", "minimum": 1, "maximum": 5},
+        "soreness": {"type": "integer", "minimum": 0, "maximum": 5},
+        "minutes": {"type": "integer", "minimum": 5, "maximum": 90},
+        "pain": {"type": "boolean"},
+        "note": {"type": "string", "maxLength": 2000},
+        "expected_revision": {"$ref": "#/$defs/revision"}
+      }
+    },
+    "exercise": {
+      "type": "object", "required": ["exercise_id", "sets", "reps"], "additionalProperties": false,
+      "properties": {
+        "exercise_id": {"enum": ["chair-squat", "wall-pushup", "hip-hinge", "bird-dog", "db-row"]},
+        "sets": {"type": "integer", "minimum": 1, "maximum": 20},
+        "reps": {"type": "integer", "minimum": 1, "maximum": 100},
+        "load_kg": {"type": "number", "minimum": 0, "maximum": 300}
+      }
+    },
+    "log": {
+      "type": "object", "required": ["id", "status"], "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-zA-Z0-9_:-]+$", "maxLength": 120},
+        "date": {"$ref": "#/$defs/date"},
+        "status": {"enum": ["completed", "partial", "rest", "skipped"]},
+        "duration_min": {"type": ["integer", "null"], "minimum": 0, "maximum": 300},
+        "weight_kg": {"type": "number", "minimum": 20, "maximum": 400},
+        "waist_cm": {"type": "number", "minimum": 30, "maximum": 300},
+        "effort": {"type": "number", "minimum": 1, "maximum": 10},
+        "pain": {"type": "boolean"},
+        "note": {"type": "string", "maxLength": 4000},
+        "exercises": {"type": "array", "maxItems": 30, "items": {"$ref": "#/$defs/exercise"}},
+        "expected_revision": {"$ref": "#/$defs/revision"}
+      }
+    },
+    "memory": {
+      "type": "object", "required": ["text"], "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^memory:[a-zA-Z0-9_-]{1,100}$"},
+        "text": {"type": "string", "minLength": 1, "maxLength": 2000},
+        "kind": {"enum": ["fact", "preference", "inference"]},
+        "confirmed": {"type": "boolean"},
+        "expires": {"type": ["string", "null"], "format": "date"},
+        "expected_revision": {"$ref": "#/$defs/revision"}
+      }
+    }
+  }
+}

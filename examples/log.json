@@ -1,0 +1,9 @@
+{
+  "id": "example-session-1",
+  "status": "completed",
+  "duration_min": 18,
+  "effort": 5,
+  "pain": false,
+  "note": "合成示例，实际完成如下 / Synthetic example, actual work below",
+  "exercises": [{"exercise_id": "chair-squat", "sets": 2, "reps": 8, "load_kg": 0}]
+}

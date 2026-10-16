@@ -1,0 +1,13 @@
+data/
+.demo/
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite*
+*.db
+.DS_Store
+.env*
+work/
+dist/
+build/
+*.egg-info/

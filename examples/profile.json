@@ -1,0 +1,12 @@
+{
+  "name": "示例用户 / Example user",
+  "age": 26,
+  "goal": "建立可持续的训练习惯 / Build a sustainable training habit",
+  "minutes": 30,
+  "days": [0, 2, 4],
+  "equipment": "bodyweight",
+  "restrictions": "",
+  "diet": "工作日食堂 / Cafeteria on weekdays",
+  "timezone": "Asia/Shanghai",
+  "locale": "zh-CN"
+}

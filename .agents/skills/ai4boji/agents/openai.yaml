@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI4薄肌"
+  short_description: "读取长期训练记忆，结合真实反馈安排每日训练，并保存记录与回顾。"
+  default_prompt: "使用 $ai4boji，先读取我的档案与近期记录，再帮我安排今天的训练。"
