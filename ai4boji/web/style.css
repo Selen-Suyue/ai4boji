@@ -11,3 +11,7 @@
 .metric .label:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--rose);margin-right:7px}.metric:nth-child(2) .label:before{background:var(--blue)}.metric:nth-child(3) .label:before{background:var(--purple)}.nav button.active{background:#f5e9ec;color:var(--rose)}.plan-hero{border-bottom:1px solid #e8e4eb}.stack-main>.card:nth-child(2) .plot-line{stroke:var(--blue)}.stack-main>.card:nth-child(2) .point{fill:var(--blue)}
 
 .preview-banner{background:#f3eff4;border-left:3px solid #7F7788;border-radius:8px;padding:12px 16px;margin-bottom:22px;font-size:13px;line-height:1.6}.preview-banner a{color:#8d4c55;font-weight:600;margin-left:10px}button:disabled{cursor:not-allowed;opacity:.55}
+.embedded-preview .sidebar,.embedded-preview .preview-banner,.embedded-preview .footer{display:none}.embedded-preview .shell{display:block}.embedded-preview .main{margin:0;width:100%;max-width:none;padding:28px}.embedded-preview .page-intro{margin-top:8px}.embedded-preview .page-intro h1{font-size:32px}@media(max-width:600px){.embedded-preview .main{padding:18px}.embedded-preview .page-intro h1{font-size:25px}}
+
+.embedded-preview #language{display:none}
+.embedded-preview .grid>*{min-width:0}.embedded-preview .plan-actions{flex-wrap:wrap}@media(max-width:900px){.embedded-preview .grid{grid-template-columns:minmax(0,1fr)}}

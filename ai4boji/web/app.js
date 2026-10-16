@@ -6,6 +6,14 @@ let lang = 'zh-CN';
 try { lang = localStorage.getItem('ai4boji.locale') || lang; } catch (_) { /* Storage can be disabled. */ }
 if (!['zh-CN', 'en'].includes(lang)) lang = 'zh-CN';
 let S, view = 'today', chosenDate = '', editingLog = null, editingMemory = null, toastTimer;
+if (window.AI4BOJI_PREVIEW) {
+  const params = new URLSearchParams(location.search);
+  if (params.get('embed') === '1') {
+    document.documentElement.classList.add('embedded-preview');
+    if (['zh-CN', 'en'].includes(params.get('lang'))) lang = params.get('lang');
+    if (['today', 'progress'].includes(params.get('view'))) view = params.get('view');
+  }
+}
 let chartSpecs = [], chartObservers = [];
 const t = (zh, en) => lang === 'zh-CN' ? zh : en;
 const L = (value) => value && typeof value === 'object' && 'zh-CN' in value ? value[lang] : (value ?? '');

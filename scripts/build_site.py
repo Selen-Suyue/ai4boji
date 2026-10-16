@@ -1,5 +1,6 @@
 """Build the public site using only synthetic, temporary records."""
 import json
+import hashlib
 import shutil
 import sys
 import tempfile
@@ -15,6 +16,11 @@ def build(destination):
     destination = Path(destination)
     destination.mkdir(parents=True, exist_ok=True)
     shutil.copytree(ROOT / 'site', destination, dirs_exist_ok=True)
+    landing = (destination / 'index.html').read_text()
+    for name in ['style.css', 'site.js']:
+        digest = hashlib.sha256((destination / name).read_bytes()).hexdigest()[:12]
+        landing = landing.replace(f'./{name}?v=2', f'./{name}?v={digest}')
+    (destination / 'index.html').write_text(landing, encoding='utf-8')
     assets = destination / 'assets'
     assets.mkdir(exist_ok=True)
     for name in ['dashboard-zh.jpg', 'progress-zh.jpg']:
@@ -47,6 +53,9 @@ window.AI4BOJI_PREVIEW = async (path,data) => {
     html = (demo / 'index.html').read_text()
     html = html.replace('href="/style.css"', 'href="./style.css"').replace('src="/app.js"', 'src="./app.js"')
     html = html.replace('<script src="./app.js"', '<script src="./preview.js" defer></script>\n  <script src="./app.js"')
+    for name in ['style.css', 'app.js']:
+        digest = hashlib.sha256((demo / name).read_bytes()).hexdigest()[:12]
+        html = html.replace(f'./{name}"', f'./{name}?v={digest}"')
     (demo / 'index.html').write_text(html, encoding='utf-8')
     (destination / '.nojekyll').touch()
     print('Built synthetic public site:', destination)

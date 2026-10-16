@@ -32,3 +32,12 @@ GitHub Actions is configured for Python 3.9 and 3.12. Deployment outcomes are vi
 - Landing page defaults to Chinese and supports English.
 - Film decoded end to end: exactly 60 seconds, 1800 frames, 1920×1080, H.264 video, stereo AAC audio.
 - Six representative film frames were visually inspected. Chinese synthetic narration, original generated music, Chinese captions and an English VTT track are included.
+
+## Motion and clarity update (2026-10-16)
+
+- Replaced the landing-page dashboard JPEG with a live, read-only HTML preview. Its plan and progress tabs follow the landing page language.
+- Added animated three-color orbits, floating labels, scroll reveals and a pause control. Reduced-motion preferences disable animation.
+- Checked the embedded preview and landing page at 320 px and desktop widths, including Chinese/English switching and overflow.
+- Re-rendered the film as `AI4薄肌-60s-v2.mp4`: large native plan text, date-spaced animated measurement curves, counters and color-wipe transitions. The plan and metrics come from the core’s synthetic data.
+- Decoded all 1,800 frames successfully; duration 60 seconds, 1920×1080 at 30 fps, H.264/AAC. Browser playback was checked with `?quiet=1`, with `video.muted` verified before playback. The downloadable film retains narration and music.
+- 25 application tests passed. Static output uses content hashes for CSS/JS URLs so updates do not reuse stale presentation assets.
