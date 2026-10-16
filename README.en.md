@@ -6,14 +6,14 @@
 
 AI4薄肌 is a local-first system for adult fitness beginners. Create a profile through the dashboard or Codex, record actual activity, retain long-term memory, generate explainable starter plans, and visualize progress. The product title remains **AI4薄肌** in every language.
 
-[![AI4薄肌 · Daily plan in English](docs/previews/plan-en-hd.png)](docs/previews/plan-en-hd.png)
+<a href="docs/previews/plan-en-hd.png"><img src="docs/previews/plan-en-hd.png" alt="AI4薄肌 · Daily plan in English" width="883"></a>
 
 Synthetic demo data. Click the focused plan image for the full-resolution original, or explore the [complete dashboard](https://selen-suyue.github.io/ai4boji/demo/). The app still opens in Chinese by default.
 
 <details>
 <summary>View high-resolution progress charts</summary>
 
-[![AI4薄肌 · Weight and chair-squat activity charts](docs/previews/progress-en-hd.png)](docs/previews/progress-en-hd.png)
+<a href="docs/previews/progress-en-hd.png"><img src="docs/previews/progress-en-hd.png" alt="AI4薄肌 · Weight and chair-squat activity charts" width="883"></a>
 
 </details>
 

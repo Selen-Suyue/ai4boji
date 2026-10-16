@@ -45,5 +45,5 @@ GitHub Actions is configured for Python 3.9 and 3.12. Deployment outcomes are vi
 ## README image clarity (2026-10-16)
 
 - Chinese and English READMEs use their respective language’s plan and progress close-ups. All four images were captured from the synthetic public demo with Chrome’s PNG screenshot output at the display’s native 2× pixel density; no JPEG intermediate or image upscaling was used.
-- Each image is 1,766 pixels wide and focuses on a single content column, keeping the interface text readable at GitHub README width. Images link to their originals, and the full live dashboard remains linked separately.
+- Each image is 1,766 pixels wide, displayed at no more than 883 CSS pixels, and focuses on a single content column, keeping the interface text readable at GitHub README width. Images link to their originals, and the full live dashboard remains linked separately.
 - README image references use new filenames, avoiding reuse of the old compressed JPEG URLs.

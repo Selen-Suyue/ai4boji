@@ -6,14 +6,14 @@
 
 AI4薄肌 为成年健身新手提供一个本地优先的训练系统：通过网页或 Codex 建档，记录实际状态和训练，保存长期记忆，生成可解释的起步安排，并用图表观察变化。所有语言下的项目标题都为 **AI4薄肌**。
 
-[![AI4薄肌 · 中文每日计划特写](docs/previews/plan-zh-hd.png)](docs/previews/plan-zh-hd.png)
+<a href="docs/previews/plan-zh-hd.png"><img src="docs/previews/plan-zh-hd.png" alt="AI4薄肌 · 中文每日计划特写" width="883"></a>
 
 合成示例数据。图片聚焦实际计划，可点击查看高清原图；完整界面见[在线演示](https://selen-suyue.github.io/ai4boji/demo/)。
 
 <details>
 <summary>查看高清训练趋势</summary>
 
-[![AI4薄肌 · 体重与坐椅深蹲训练趋势](docs/previews/progress-zh-hd.png)](docs/previews/progress-zh-hd.png)
+<a href="docs/previews/progress-zh-hd.png"><img src="docs/previews/progress-zh-hd.png" alt="AI4薄肌 · 体重与坐椅深蹲训练趋势" width="883"></a>
 
 </details>
 
